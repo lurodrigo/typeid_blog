@@ -4,8 +4,7 @@ defmodule Blog.Comment do
 
   @primary_key {:id, TypeID, autogenerate: true, prefix: "comment", type: :uuid}
   @foreign_key_type TypeID
-  # @primary_key {:id, :binary_id, autogenerate: true}
-  # @foreign_key_type :binary_id
+
   schema "comments" do
     field :body, :string
     belongs_to :post, Blog.Post
