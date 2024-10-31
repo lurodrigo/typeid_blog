@@ -59,7 +59,8 @@ defmodule Blog.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:typeid_elixir, "~> 1.0"}
+      {:typeid_elixir,
+       git: "https://github.com/lurodrigo/typeid-elixir.git", branch: "belongs-to-column-type"}
     ]
   end
 
