@@ -3,8 +3,6 @@ defmodule Blog.Post do
   import Ecto.Changeset
 
   @primary_key {:id, TypeID, autogenerate: true, prefix: "post", type: :uuid}
-  @foreign_key_type TypeID
-
   schema "posts" do
     field :title, :string
     field :body, :string

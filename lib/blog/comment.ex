@@ -3,11 +3,9 @@ defmodule Blog.Comment do
   import Ecto.Changeset
 
   @primary_key {:id, TypeID, autogenerate: true, prefix: "comment", type: :uuid}
-  @foreign_key_type TypeID
-
   schema "comments" do
     field :body, :string
-    belongs_to :post, Blog.Post
+    belongs_to :post, Blog.Post, type: TypeID, column_type: :uuid
 
     timestamps(type: :utc_datetime)
   end
