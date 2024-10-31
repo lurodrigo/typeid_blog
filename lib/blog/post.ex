@@ -2,10 +2,9 @@ defmodule Blog.Post do
   use Ecto.Schema
   import Ecto.Changeset
 
-  # @primary_key {:id, TypeID, autogenerate: true, prefix: "post", type: :uuid}
-  # @foreign_key_type TypeID
-  @primary_key {:id, :binary_id, autogenerate: true}
-  @foreign_key_type :binary_id
+  @primary_key {:id, TypeID, autogenerate: true, prefix: "post", type: :uuid}
+  @foreign_key_type TypeID
+
   schema "posts" do
     field :title, :string
     field :body, :string
