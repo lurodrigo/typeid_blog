@@ -3,9 +3,9 @@ defmodule Blog.Repo.Migrations.CreateComments do
 
   def change do
     create table(:comments, primary_key: false) do
-      add :id, :binary_id, primary_key: true
+      add :id, :uuid, primary_key: true
       add :body, :text
-      add :post_id, references(:posts, on_delete: :nothing, type: :binary_id)
+      add :post_id, references(:posts, on_delete: :nothing, type: :uuid)
 
       timestamps(type: :utc_datetime)
     end
